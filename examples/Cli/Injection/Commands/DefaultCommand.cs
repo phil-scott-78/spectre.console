@@ -4,6 +4,19 @@ using Spectre.Console.Cli;
 
 namespace Spectre.Console.Examples
 {
+    public sealed class OtherCommand : Command<OtherCommand.Settings>
+    {
+        public sealed class Settings : CommandSettings
+        {
+
+        }
+
+        public override int Execute(CommandContext context, Settings settings)
+        {
+            return 0;
+        }
+    }
+
     public sealed class DefaultCommand : Command<DefaultCommand.Settings>
     {
         private readonly IGreeter _greeter;
